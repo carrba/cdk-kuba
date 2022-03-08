@@ -4,18 +4,18 @@ import * as cdk from 'aws-cdk-lib';
 import { CdkKubaStack } from '../lib/cdk-kuba-stack';
 
 const app = new cdk.App();
-new CdkKubaStack(app, 'CdkKubaStack', {
-  /* If you don't specify 'env', this stack will be environment-agnostic.
-   * Account/Region-dependent features and context lookups will not work,
-   * but a single synthesized template can be deployed anywhere. */
+const vpcid = app.node.tryGetContext("vpc-id");
+const subnetid = app.node.tryGetContext("subnet-id");
 
-  /* Uncomment the next line to specialize this stack for the AWS Account
-   * and Region that are implied by the current CLI configuration. */
-  // env: { account: process.env.CDK_DEFAULT_ACCOUNT, region: process.env.CDK_DEFAULT_REGION },
+// create stack props object
+const props = {
+  env: {
+    account: '211079746874',
+    region: 'eu-west-1'
+  },
+  vpcid: vpcid,
+  subnetid: subnetid,
+};
 
-  /* Uncomment the next line if you know exactly what Account and Region you
-   * want to deploy the stack to. */
-  // env: { account: '123456789012', region: 'us-east-1' },
-
-  /* For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html */
-});
+// create stack
+new CdkKubaStack(app, 'CdkKubaStack', props);
