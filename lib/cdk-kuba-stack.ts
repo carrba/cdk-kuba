@@ -1,13 +1,8 @@
 import { Stack, StackProps, CfnOutput, aws_elasticloadbalancingv2_targets, aws_kms } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
-import { Asset } from 'aws-cdk-lib/aws-s3-assets';
-import * as path from 'path';
 import { KeyPair } from 'cdk-ec2-key-pair';
-import { Subnet, Vpc } from 'aws-cdk-lib/aws-ec2';
-import * as iam from 'aws-cdk-lib/aws-iam'
 import {readFileSync, writeFileSync} from 'fs';
-// import * as sqs from 'aws-cdk-lib/aws-sqs';
 
 export interface myStackProps extends StackProps {
   vpcid: string;
@@ -26,6 +21,17 @@ export class CdkKubaStack extends Stack {
         //isDefault: false
       });
     }
+    /*
+    else if (props.subnetid) {
+      const mysubnet = ec2.Subnet.fromSubnetId(this, "subnet", props.subnetid);
+        myvpcid = mysubnet.subnetVpcId,
+      })
+      myvpc = ec2.Vpc.fromLookup(this, "VPC", {
+        vpcId: myvpcid,
+        //isDefault: false
+      });
+    }
+    */
     else {
       myvpc = new ec2.Vpc(this, 'vpc', {
         vpcName: "CDK Practice Test",
