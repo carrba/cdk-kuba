@@ -9,7 +9,7 @@ const subnetid = app.node.tryGetContext("subnet-id");
 // create stack props object
 const props = {
   env: {
-    account: '211079746874',
+    account: '',
     region: 'eu-west-1'
   },
   vpcid: vpcid,
