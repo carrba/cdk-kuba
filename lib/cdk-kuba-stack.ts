@@ -101,7 +101,7 @@ export class CdkKubaStack extends Stack {
     // key pair
     const keypair = new KeyPair (this, 'ec2-key', {
       name: 'ec2-keypair',
-      publicKey: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDECJsrrE4X19WGkg9VH4Z2LKaBfxTsKMRqq2wjDLqH15HRetG3DtDabWLXhJ+9gge5ImTftvyjOzgpx/CLCqTK72CrAN7TQIUZs8Dx/EJEIz8/+f8DWPwJ/VgbUj0of5ff3Q6eyDbV3Arhrar5uUbpvYnkQxouRIlLCk0MG9Z0qud+2zPZmrvtOnsKI1fdc53o68GYr1/ZiNmpH2JUsFBC4UOPou2s9uQlFzULOfksRbqQtivtvxhdokkKR2PoMvpTRhg9sdy5FoBxAZ13ZmGQRAJRsemBm0oKl7eSajxuxT3AQXkKAVkvQkue5Xz+2zEYVy1F5aqyStq17g4pPAtp5PuM2bUxoNrgMwQXjtfwfv2V+b5/RqwsQYPHiu0RH5qqbF8FVaKPP3AEVj4TIyOukcVSbwRDAawjvJe8Vl5JSnYlMATqXXE/UEVRt6oFP4yYZDf/nCPLAjkLHya6hlNpYDbtv8LThmKyOVfT4xdEjfvO5XzpOV4UTRqV9hqUINs= bcarr@Dell-Lat',
+      publicKey: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDXCr/4fjwdLSSUjjxvwzGs5f6d9m9LsgafzraMQfuRhPeQhpAw6AxCg5JcCTpibh32z2zGrL7HIub1elVgu1H5fPsy1sow+cVNu3gFaHwkbeEyuUlLNRdTOr8ht7HL6N1ECe7ModKzz1Cd13hU4zkS5zq38uElnLeZSEc4Kx/zqTRJnp5z4eTsX25Z29NPud3XcEXYPJacXeLn0JsydM/+Hhh0bBqOajt0AwBPr/wpfkNg976ypj0UOUbVyOzk/HyCf0lo43asOlBA0VXqJX/UFN8W889tQn2Ck6QftFhxpF/ljJYIgs4D17M79RWSeCnaKzO+fPMNmnRfesJk0HDd/F3I1c1BzLE4qkEgwWL4aSdxk8E5cdQoH594nsPBNlPsA1z7L2zhl9fUMEtW3QjnQjklicjQmWLerCo2+k2c8JuSjUsaf9zKa8BAHKR0fuTEHR9BASzvK4YTvisEFY4QBbt8wFGOcKoVRhBZxdSA4fp038IMaqnxbOHyCfaiAN0= v1\carrb@LAPTOP3519',
     })
 
     // ec2 box1 instance
